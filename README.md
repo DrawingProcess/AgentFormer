@@ -21,8 +21,7 @@ We have recently noticed a [normalization bug](https://github.com/Khrylx/AgentFo
 ### Dependencies:
 1. Install [PyTorch 1.8.0](https://pytorch.org/get-started/previous-versions/) with the correct CUDA version.
     ```
-    pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 \
--f https://download.pytorch.org/whl/torch_stable.html
+    pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
     ```
 
 2. Install the dependencies:
@@ -32,6 +31,12 @@ We have recently noticed a [normalization bug](https://github.com/Khrylx/AgentFo
 
 ### Datasets
 * For the ETH/UCY dataset, we already included a converted version compatible with our dataloader under [datasets/eth_ucy](datasets/eth_ucy).
+'''
+pip install gdown
+
+gdown "https://drive.google.com/uc?id=1-pJrGPCcbaiCpENss5jYzRF_ZFJncFJB" -O pretrained_models.zip
+unzip pretrained_models.zip
+'''
 * For the nuScenes dataset, the following steps are required:
   1. Download the orignal [nuScenes](https://www.nuscenes.org/nuscenes) dataset. Checkout the instructions [here](https://github.com/nutonomy/nuscenes-devkit).
   2. Follow the [instructions](https://github.com/nutonomy/nuscenes-devkit#prediction-challenge) of nuScenes prediction challenge. Download and install the [map expansion](https://github.com/nutonomy/nuscenes-devkit#map-expansion).
